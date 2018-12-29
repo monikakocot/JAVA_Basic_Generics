@@ -24,7 +24,9 @@ public class Main {
 
         FootballPlayer roberLeandowski = new FootballPlayer("Robert Lewandowski");
         FootballPlayer kubaBlaszczykowski = new FootballPlayer("Kuba Błaszczykwoski");
+        BaseballPlayer alan = new BaseballPlayer("Alan");
 
+        //lech.addPlayer(alan); // does not work :)
         lech.addPlayer(roberLeandowski);
         legia.addPlayer(kubaBlaszczykowski);
         legia.addPlayer(kubaBlaszczykowski);
