@@ -13,10 +13,8 @@ Add only units of the same type to each detail.
 - league instance - the program can not compile
 if you try to add an incompatible team.
 */
-import com.company.challange.Player;
 
 import java.util.ArrayList;
-
 // Player - top limit
 public class Team <T extends Player> implements Comparable<Team<T>> {
 
@@ -44,13 +42,11 @@ public class Team <T extends Player> implements Comparable<Team<T>> {
             System.out.println(player.getName() + "picked for team");
             return true;
         }
-
     }
 
     public int numPlayers() {
         return this.members.size();
     }
-
 
     public void matchResult(Team<T> opponent, int ourScore, int theirScore) {
         String message;
@@ -73,17 +69,16 @@ public class Team <T extends Player> implements Comparable<Team<T>> {
         }
     }
 
-
     public int ranking() {
         return (won * 2) + tied;
     }
-
 
     @Override
     public int compareTo(Team<T> team) {
         if(this.ranking() > team.ranking()) {
             return -1;
-        } else if (this.ranking() < this.ranking()) {
+        //} else if (this.ranking() < this.ranking()) {
+        } else if (this.ranking() < team.ranking()) {
             return 1;
         } else {
             return 0;
